@@ -10,3 +10,12 @@ Shell is broadly classified into two categories –
 
 Command Line Shell
 Graphical shell
+
+There are several shells are available for Linux systems like –
+
+BASH (Bourne Again SHell) – It is the most widely used shell in Linux systems. It is used as default login shell in Linux systems and in macOS. 
+It can also be installed on Windows OS.
+
+CSH (C SHell) – The C shell’s syntax and its usage are very similar to the C programming language.
+
+KSH (Korn SHell) – The Korn Shell was also the base for the POSIX Shell standard specifications etc.
