@@ -49,3 +49,9 @@ Invalid variable names
 !ABD
 $ABC
 &QAID
+
+
+Defining Variables
+
+Syntax
+variable_name = <variable data>
