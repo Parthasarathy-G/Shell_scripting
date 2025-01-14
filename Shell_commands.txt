@@ -29,3 +29,23 @@ Shell Keywords – if, else, break etc.
 Shell commands – cd, ls, echo, pwd, touch etc.
 Functions
 Control flow – if..then..else, case and shell loops etc.
+
+
+A shell variable is a character string in a shell that stores some value. It could be an integer, filename, string, or some shell command itself. Basically, it is a pointer to the actual data stored in memory. We have a few rules that have to be followed while writing variables in the script (which will be discussed in the article). Overall knowing the shell variable scripting leads us to write strong and good shell scripts.
+
+Rules for variable definition
+ A variable name could contain any alphabet (a-z, A-Z), any digits (0-9), and an underscore ( _ ). However, a variable name must start with an alphabet or underscore. It can never start with a number. Following are some examples of valid and invalid variable names:
+
+Valid Variable Names
+
+ABC
+_AV_3
+AV232
+
+
+Invalid variable names 
+
+2_AN
+!ABD
+$ABC
+&QAID
