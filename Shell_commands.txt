@@ -19,3 +19,13 @@ It can also be installed on Windows OS.
 CSH (C SHell) – The C shell’s syntax and its usage are very similar to the C programming language.
 
 KSH (Korn SHell) – The Korn Shell was also the base for the POSIX Shell standard specifications etc.
+
+
+A shell script has syntax just like any other programming language. If you have any prior experience with any programming language like Python, C/C++ etc. It would be very easy to get started with it.
+
+A shell script comprises the following elements –
+
+Shell Keywords – if, else, break etc.
+Shell commands – cd, ls, echo, pwd, touch etc.
+Functions
+Control flow – if..then..else, case and shell loops etc.
