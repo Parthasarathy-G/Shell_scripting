@@ -19,3 +19,5 @@ cd ..
 git add *
 
 git commit -a -m "Folder created by scripting and added files"
+
+git push

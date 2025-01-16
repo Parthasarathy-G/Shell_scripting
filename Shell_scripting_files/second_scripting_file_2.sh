@@ -19,3 +19,5 @@ rmdir Testing
 #Git commit
 
 git commit -a -m "Testing Folder removed"
+
+git push
