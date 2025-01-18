@@ -12,12 +12,3 @@ cd Testing
 
 touch test1.txt test2.txt
 
-#Change folder and git commit
-
-cd ..
-
-git add *
-
-git commit -a -m "Folder created by scripting and added files"
-
-git push
