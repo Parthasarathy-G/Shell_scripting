@@ -1,0 +1,470 @@
+My Two-Week Journey Into Shell Scripting: Week 1 Highlights
+I recently decided to take on a two-week challenge to learn shell scripting. It’s been one week so far, and I wanted to share what I’ve learned and accomplished. Here’s a quick recap of my experience so far.
+
+Week 1: Getting Started with Shell Scripting
+This first week was all about learning the basics and getting comfortable with the core concepts. Shell scripting might look simple, but it’s incredibly powerful for handling tasks efficiently. Here’s what I focused on:
+
+1. Learning the Basics:
+Tried out different shell environments like Bash.
+
+Learned how to write and run basic shell scripts.
+
+Figured out how to use variables, loops, and conditions in scripts.
+
+2. Functions in Shell Scripting:
+Learned how to break scripts into smaller, reusable parts using functions.
+
+Practiced writing functions to keep my scripts clean and organized.
+
+Added basic error-handling to make sure the scripts didn’t crash unexpectedly.
+
+The Highlight: My First AWS Services Script
+To test out what I learned, I made a simple shell script that lists AWS services available by region and service name. Here’s how it worked:
+
+What the Script Does:
+
+It checks what AWS services are available in different regions.
+
+It shows the services in a clear, organized way.
+
+How I Built It:
+
+Used AWS CLI commands to get the list of services.
+
+Processed the output to make it easy to read.
+
+Added options to let users pick specific regions or services.
+
+Challenges I Faced:
+
+Figuring out how to work with JSON output from AWS CLI was tricky at first, but tools like jq made it easier.
+
+Making sure the script worked on different systems took some extra effort.
+
+What I Learned:
+
+How to use loops and conditions in a real script.
+
+Combining shell scripting with other tools like AWS CLI can save a lot of time.
+
+Additional Shell Scripting Concepts and Examples
+Step-by-Step Guide to Creating and Running a Shell Script
+Step 1: Create a script.sh file and use the nano command to edit it. There are also other ways to edit files, but I find nano is the easiest.
+
+After executing these commands, you will enter the editor where we will write the bash script.
+
+Step 2: First, we'll write shebang or hashbang, #! which is used to tell the kernel which interpreter should be used to run the bash script. This #!/bin/bash statement tells the kernel to interpret it as a bash script. Then we'll print "Hello World" as follows:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 12/01/2025
+#Description : Basic shell scripting
+#####################################
+echo "Hello World"
+Step 3: Now, to save this file, hit CTRL + X, then hit Y for yes, and finally press Enter to save the file.
+
+Step 4: Finally, run bash script.sh to execute the file. You’ll see "Hello World" in the terminal.
+
+Variables
+Variables are used to store data that can be used in shell scripts. To create a variable, simply assign a value to it using the = sign.
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 12/01/2025
+#Description : Basic shell scripting
+#####################################
+NAME="John"
+echo "Hello, $NAME!"
+The $ sign is used to refer to the value of a variable. When you include the $ sign before the variable name, the shell interpreter replaces it with the value of the variable.
+
+Arithmetic Operators
+These operators are used to perform mathematical operations on numeric values.
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 13/01/2025
+#Description : Basic shell scripting arithmetic operators
+#####################################
+
+# declare two variables
+a=10
+b=5
+
+# perform arithmetic operations
+sum=$((a + b))
+difference=$((a - b))
+product=$((a * b))
+quotient=$((a / b))
+remainder=$((a % b))
+power=$((a ** b))
+
+# print the results
+echo "sum: $sum"
+echo "difference: $difference"
+echo "product: $product"
+echo "quotient: $quotient"
+echo "remainder: $remainder"
+echo "power: $power"
+Comparison Operators
+These operators are used to compare values and return a Boolean value (true or false).
+
+
+Copy
+
+Copy
+#!/bin/bash
+# declare two variables
+####################################
+#Author : Parthasarathy G
+#Date : 13/01/2025
+#Description : Basic shell scripting compare operators
+#####################################
+a=10
+b=5
+
+# compare the values of the variables
+if [ $a -eq $b ]
+then
+  echo "a is equal to b"
+else
+  echo "a is not equal to b"
+fi
+
+if [ $a -gt $b ]
+then
+  echo "a is greater than b"
+else
+  echo "a is not greater than b"
+fi
+
+if [ $a -lt $b ]
+then
+  echo "a is less than b"
+else
+  echo "a is not less than b"
+fi
+Logical Operators
+These operators combine multiple conditions.
+
+
+Copy
+
+Copy
+#!/bin/bash
+# declare two variables
+####################################
+#Author : Parthasarathy G
+#Date : 13/01/2025
+#Description : Basic shell scripting logical operatores
+#####################################
+a=10
+b=5
+
+# check if a is greater than b AND less than 20
+if [ $a -gt $b ] && [ $a -lt 20 ]
+then
+  echo "a is greater than b and less than 20"
+else
+  echo "a is not greater than b or not less than 20"
+fi
+
+# check if a is less than b OR greater than 20
+if [ $a -lt $b ] || [ $a -gt 20 ]
+then
+  echo "a is less than b or greater than 20"
+else
+  echo "a is not less than b and not greater than 20"
+fi
+
+# check if a is NOT equal to b
+if [ ! $a -eq $b ]
+then
+  echo "a is not equal to b"
+else
+  echo "a is equal to b"
+fi
+String Operators
+These operators compare two strings.
+
+
+Copy
+
+Copy
+#!/bin/bash
+# declare two variables
+####################################
+#Author : Parthasarathy G
+#Date : 14/01/2025
+#Description : Basic shell scripting string operators
+#####################################
+name1="Rahul"
+name2="Rohit"
+
+# compare the values of the variables
+if [ $name1 = $name2 ]
+then
+  echo "The names are the same"
+else
+  echo "The names are different"
+fi
+
+if [ $name1 != $name2 ]
+then
+  echo "The names are different"
+else
+  echo "The names are the same"
+fi
+Conditionals
+If-Else Statement:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 14/01/2025
+#Description : Basic shell scripting if-else statement
+#####################################
+
+num=15
+# check if the number is greater than 10
+if [ $num -gt 10 ]
+then
+   echo "The number is greater than 10"
+else
+   echo "The number is less than 10"
+fi
+Case Statement:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 14/01/2025
+#Description : Basic shell scripting case statement
+#####################################
+
+fruit="apple"
+# check the value of the variable
+case $fruit in
+  apple)
+    echo "This is an apple"
+    ;;
+  banana)
+    echo "This is a banana"
+    ;;
+  *)
+    echo "I don't know what this is"
+    ;;
+esac
+Loops
+For Loop:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 15/01/2025
+#Description : Basic shell scripting for loop
+#####################################
+
+# use a for loop to print the numbers 1 to 5
+
+for i in 1 2 3 4 5
+do
+  echo $i
+done
+While Loop:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 15/01/2025
+#Description : Basic shell scripting while loop
+#####################################
+
+# use a while loop to print the numbers 1 to 5
+i=1
+while [ $i -le 5 ]
+do
+  echo $i
+  i=$((i+1))
+done
+Functions
+Single Parameter Function:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 16/01/2025
+#Description : Basic shell scripting
+#####################################
+
+# define a function to print a greeting
+sayhello() {
+  echo "Hello, $1!"
+}
+# call the sayhello function with a name parameter
+sayhello "Rahul"
+Function with Two Parameters:
+
+
+Copy
+
+Copy
+#!/bin/bash
+####################################
+#Author : Parthasarathy G
+#Date : 16/01/2025
+#Description : Basic shell scripting
+#####################################
+
+# define a function to add two numbers
+add() {
+  result=$(($1 + $2))
+  return $result
+}
+
+# call the add function and save the result
+add 5 3
+result=$?
+
+echo "5 + 3 = $result"
+Functions are a powerful feature of shell scripting and can simplify complex scripts, making them more modular and reusable.
+
+AWS services resource-list script:
+
+Copy
+
+Copy
+#!/bin/bash
+
+#################################################################
+
+# This script will list all the resources in the AWS account
+# Author : Parthasarathy G
+# Version: v0.0.1
+# Date : 18/01/2025
+
+# Following are the supported AWS services by the script
+# 1. EC2
+# 2. S3
+# 3. RDS
+# 4. DynamoDB
+# 5. Lambda
+# 6. IAM
+# 7. CloudFormation
+# 8. CloudWatch
+# 9. VPC
+# 10. SNS
+
+#Usage: ./aws-resource-list.sh <region> <service-name>
+#Example: ./aws-resource-list.sh us-east-1 ec2
+
+#################################################################
+
+# Check if the required arguments are passed
+
+   if [ $# -ne 2 ]; then
+   echo "Usage: ./aws-resource-list.sh <region> <service-name>"
+   echo "Example: ./aws-resource-list.sh us-east-1 ec2"
+    exit 1
+fi
+
+#Check if the AWS CLI is installed
+
+if ! command -v aws &> /dev/null
+then
+    echo "AWS CLI could not be found. Please install the AWS CLI"
+    exit
+fi
+
+#Check if the AWS CLI is configured
+
+if [ ! -d ~/.aws ]; then
+    echo "AWS CLI is not configured. Please configure the AWS CLI"
+    exit
+fi
+
+#Execute the AWS CLI command based on the service name
+
+case $2 in
+    ec2)
+        aws ec2 describe-instances --region $1
+        ;;
+    s3)
+        aws s3api list-buckets --region $1
+        ;;
+    rds)
+        aws rds describe-db-instances --region $1
+        ;;
+    dynamodb)
+        aws dynamodb list-tables --region $1
+        ;;
+    lambda)
+        aws lambda list-functions --region $1
+        ;;
+    iam)
+        aws iam list-users --region $1
+        ;;
+    cloudformation)
+        aws cloudformation list-stacks --region $1
+        ;;
+    cloudwatch)
+        aws cloudwatch list-metrics --region $1
+        ;;
+    vpc)
+        aws ec2 describe-vpcs --region $1
+        ;;
+    sns)
+        aws sns list-topics --region $1
+        ;;
+    *)
+        echo "Invalid service name. Please provide a valid service name"
+        ;;
+esac
+Functions are a powerful feature of shell scripting and can simplify complex scripts, making them more modular and reusable.
+
+Github link - https://github.com/Parthasarathy-G/Aws-resource-list
+
+Looking Back
+This week has been both fun and challenging. Creating my first AWS script felt like a big step forward. It showed me how useful shell scripting can be for solving everyday problems.
+
+Next week, I’m planning to learn about:
+
+Managing files and directories with scripts.
+
+Improving my AWS script by adding more features, like saving the output to a file.
+
+I’m excited to keep learning and see how much I can improve. I’ll share more updates soon!
