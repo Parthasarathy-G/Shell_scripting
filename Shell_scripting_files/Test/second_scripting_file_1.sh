@@ -12,3 +12,6 @@ cd Testing
 
 touch test1.txt test2.txt
 
+# remove the files
+
+rm test1.txt test2.txt
