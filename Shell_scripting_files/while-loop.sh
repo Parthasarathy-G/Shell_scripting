@@ -6,8 +6,9 @@
 #####################################
 
 # use a while loop to print the numbers 1 to 5
-i=1
-while [ $i -le 5 ]
+read -p "Enter the first number to start: " i;
+read -p "Enter the first number to end: " j;
+while [ $i -le $j ]
 do
   echo $i
   i=$((i+1))
