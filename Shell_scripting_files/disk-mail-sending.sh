@@ -1,5 +1,10 @@
 #!/bin/bash
 
+################################
+#Name : Parthasarathy G
+#Date : 30/01/2025
+################################
+
 # Email settings
 TO="parthasarathy.work@gmail.com"
 SUBJECT="Disk Usage Alert"
