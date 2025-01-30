@@ -5,14 +5,17 @@
 #Description : Basic shell scripting case statement
 #####################################
 
-fruit="apple"
+read value;
 # check the value of the variable
-case $fruit in
+case $value in
   apple)
     echo "This is an apple"
     ;;
   banana)
     echo "This is a banana"
+    ;;
+  carrot)
+    echo "This is a carrot"
     ;;
   *)
     echo "I don't know what this is"

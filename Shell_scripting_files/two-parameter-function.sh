@@ -10,10 +10,12 @@ add() {
   result=$(($1 + $2))
   return $result
 }
-
+# read number from  user
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
 # call the add function and save the result
-add 5 3
+add $num1 $num2
 result=$?
 
-echo "5 + 3 = $result"
+echo "$num1 + $num2 = $result"
 
