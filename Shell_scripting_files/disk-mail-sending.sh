@@ -15,6 +15,6 @@ USAGE=$(df -h | grep '/mnt/c' | awk '{print $5}' | sed 's/%//g')
 
 # Check if the usage exceeds the threshold
 if [ "$USAGE" -gt "$THRESHOLD" ]; then
-    # Send an email alert
-    echo "Disk usage of drive C: has exceeded $THRESHOLD%. Current usage is $USAGE%." | mail -s "$SUBJECT" "$TO"
+    # Send an email alert using sendmail
+    echo -e "Subject: $SUBJECT\n\nDisk usage of drive C: has exceeded $THRESHOLD%. Current usage is $USAGE%." | sendmail "$TO"
 fi
